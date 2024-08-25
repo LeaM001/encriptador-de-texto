@@ -1,0 +1,156 @@
+:root {
+  --color-fondo: #F3F5FC;
+  --dark-blue: #0A3871;
+  --light-blue: #D8DFE8;
+  --font-inter: "Inter", sans-serif;
+}
+
+html {
+  font-size: 62.5%;  /* 1rem sera igual a 10px */
+}
+
+body {
+  background-color: var(--color-fondo);
+  font-family: var(--font-inter);
+}
+
+header {
+  margin-bottom: 5rem;
+  width: 60%;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+header img {
+  width: 120px;
+  height: 48px;
+}
+
+.form_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70dvh;
+}
+
+.form_input {
+  width: 100%;
+  max-width: 577px;
+  height: 64dvh;
+  background: transparent;
+  border-color: transparent;
+  outline: none;
+  margin-bottom: 3rem;
+  color: var(--dark-blue);
+  font-family: var(--font-inter);
+  font-size: 3.2rem;
+  overflow: auto;
+}
+
+::placeholder {
+  color: var(--dark-blue);
+}
+
+.exclamation_msj {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: .7rem;
+  font-size: 1.2rem;
+}
+
+.submit_container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn_encriptar {
+  background: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+  color: white;
+  width: 328px;
+  height: 67px;
+  border-radius: 24px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+}
+
+.btn_desencriptar {
+  background: transparent;
+  color: var(--dark-blue);
+}
+
+.resultado {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    width: 100%;
+    max-width: 40rem;
+    height: 92dvh;
+    border-radius: 32px;
+}
+
+.resultado_img {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/*  Responsive Design  */
+
+@media screen and (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+    .submit_container {
+      justify-content: center;
+    }
+    .resultado {
+      height: auto;
+      max-width: 624px;
+      min-height: 186px;
+      margin-top: 2rem;
+    }
+    .resultado_img {
+      display: none;
+    }
+    header img {
+      width: 70px;
+    }
+}
+
+
+/*  HTML: <div class="loader"></div>
+    css-loaders.com -
+*/
+
+.loader {
+  /* width: fit-content; */
+  font-weight: bold;
+  font-family: monospace;
+  white-space: pre;
+  font-size: 30px;
+  line-height: 1.2em;
+  height:1.2em;
+  overflow: hidden;
+}
+.loader:before {
+  content:"Loading...\A⌰oading...\A⌰⍜ading...\A⌰⍜⏃ding...\A⌰⍜⏃⎅ing...\A⌰⍜⏃⎅⟟ng...\A⌰⍜⏃⎅⟟⋏g...\A⌰⍜⏃⎅⟟⋏☌...\A⌰⍜⏃⎅⟟⋏☌⟒..\A⌰⍜⏃⎅⟟⋏☌⟒⏁.\A⌰⍜⏃⎅⟟⋏☌⟒⏁⋔";
+  white-space: pre;
+  display: inline-block;
+  animation: l39 1s infinite steps(11) alternate;
+}
+
+@keyframes l39 {
+  100%{transform: translateY(-100%)}
+}
